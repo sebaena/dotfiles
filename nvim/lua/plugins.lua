@@ -136,4 +136,4 @@ local plugins = {
 }
 
 
-requirei"lazy").setup(plugins)
+require("lazy").setup(plugins)
