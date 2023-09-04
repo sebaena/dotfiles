@@ -14,7 +14,7 @@ require('nvim-treesitter.configs').setup {
 		'bash',
 		'verilog',
 		'groovy',
-		'dockerfile'
+		'dockerfile',
 	},
 
     auto_install = false,

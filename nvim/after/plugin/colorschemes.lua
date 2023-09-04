@@ -1,8 +1,8 @@
 
 -- Use this function from init.lua to set color theme more easily
 -- Set as default always gruvbox. Can pass null to keep some default fields
-function SetTheme(color, background, transparency) 
-	color = color or "gruvbox"
+function SetThemeManually(color, background, transparency) 
+	color = color or "embark"
 	background = background or "dark"
 	vim.cmd.colorscheme(color)
 	vim.o.background = background
@@ -12,5 +12,15 @@ function SetTheme(color, background, transparency)
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	end
 
+end
+
+function SetDarkTheme(color, transparency) 
+	color = color or "embark" -- set some default
+    SetThemeManually(color, "dark", transparency)
+end
+
+function SetLightTheme(color, transparency) 
+	color = color or "gruvbox" -- set some default
+    SetThemeManually(color, "light", transparency)
 end
 

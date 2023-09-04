@@ -3,4 +3,4 @@ require "remap"
 require "plugins"
 
 -- set colorcheme easily
-SetTheme("embark","dark")
+SetDarkTheme("embark")
