@@ -16,3 +16,4 @@ vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.scrolloff = 8
+vim.opt.clipboard = 'unnamedplus'
