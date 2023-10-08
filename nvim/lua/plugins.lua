@@ -23,6 +23,10 @@ local plugins = {
     },
 
     { 
+        "blazkowolf/gruber-darker.nvim" 
+    },
+
+    { 
         'catppuccin/nvim',
         name = 'catppuccin',
         priority = 1000 
@@ -42,11 +46,19 @@ local plugins = {
             'nvim-lua/plenary.nvim' 
         } 
     },
-
+    {
+        'nvim-telescope/telescope-fzf-native.nvim', build = 'make' 
+    },
     -- Comment easily
     {
         'numToStr/Comment.nvim',
         lazy = false,
+    },
+
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {} -- this is equalent to setup({}) function
     },
 
     -- Better syntax highlighting
