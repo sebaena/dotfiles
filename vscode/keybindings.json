@@ -1,0 +1,65 @@
+// Place your key bindings in this file to override the defaults
+[
+     
+    { 
+        "key": "ctrl+alt+t", 
+        "command": "workbench.action.terminal.toggleTerminal" 
+    }, 
+    { 
+        "key": "ctrl+h", 
+        "command": "workbench.action.navigateLeft" 
+    }, 
+    { 
+        "key": "ctrl+l", 
+        "command": "workbench.action.navigateRight" 
+    }, 
+    { 
+        "key": "ctrl+j", 
+        "command": "workbench.action.navigateDown" 
+    }, 
+    { 
+        "key": "ctrl+k", 
+        "command": "workbench.action.navigateUp" 
+    }, 
+    { 
+        "key": "ctrl+shift+a", 
+        "command": "workbench.action.toggleActivityBarVisibility" 
+    }, 
+    { 
+        "key": "ctrl+shift+e", 
+        "command": "workbench.action.toggleFileExplorer", 
+        "when": "editorTextFocus" 
+    }, 
+    { 
+        "key": "ctrl+shift+w v", 
+        "command": "workbench.action.splitEditor" 
+    }, 
+    { 
+        "key": "ctrl+oem_5", 
+        "command": "-workbench.action.splitEditor" 
+    }, 
+    { 
+        "key": "ctrl+shift+w s", 
+        "command": "workbench.action.splitEditorOrthogonal" 
+    }, 
+    { 
+        "key": "ctrl+k ctrl+oem_5", 
+        "command": "-workbench.action.splitEditorOrthogonal" 
+    }, 
+    { 
+        "key": "ctrl+shift+right", 
+        "command": "workbench.action.increaseViewWidth" 
+    }, 
+    { 
+        "key": "ctrl+shift+left", 
+        "command": "workbench.action.decreaseViewWidth" 
+    }, 
+    { 
+        "key": "ctrl+shift+up", 
+        "command": "workbench.action.increaseViewHeight" 
+    }, 
+    { 
+        "key": "ctrl+shift+down", 
+        "command": "workbench.action.decreaseViewHeight" 
+    } 
+]

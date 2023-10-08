@@ -1,0 +1,106 @@
+{
+  "vhdl.enableStutterBrackets": true,
+  "editor.formatOnType": true,
+  "vhdl.enableStutterDelimiters": true,
+  "vhdl.enableStutterComments": true,
+  "editor.accessibilityPageSize": 12,
+  "C_Cpp.updateChannel": "Insiders",
+  "workbench.iconTheme": "material-icon-theme",
+  "code-runner.runInTerminal": true,
+  // "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "IosevkaTerm Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#0631ec",
+    "editor.selectionHighlightBackground": "#851111"
+  },
+  "javascript": "node",
+  "php": "C:\\php\\php.exe",
+  "python": "python",
+  "perl": "perl",
+  "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+  "go": "go run",
+  "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+  "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+  "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "cpp": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  "window.zoomLevel": 1,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
+  // -------------------START OF VIM configurations -----------------
+  "vim.leader": "<space>",
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "leader",
+        "n",
+        "o"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "q"
+      ],
+      "commands": [
+        ":q"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "q"
+      ],
+      "commands": [
+        ":q"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    }
+  ],
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Tokyo Night",
+  "MarkdownPaste.path": "./images/",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/svillega/.config/nvim/init.vim",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.neovimExecutablePaths.win32": ""
+}
