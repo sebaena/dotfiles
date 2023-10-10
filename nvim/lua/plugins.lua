@@ -21,23 +21,74 @@ local plugins = {
         name='gruvbox', 
         priority = 1000
     },
-
     { 
-        "blazkowolf/gruber-darker.nvim" 
+        'blazkowolf/gruber-darker.nvim',
+        name='gruber', 
+        priority = 1000
     },
-
     { 
         'catppuccin/nvim',
         name = 'catppuccin',
         priority = 1000 
-
     },
-
     {
         'embark-theme/vim', 
         name = 'embark', 
         priority = 1000
     },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000
+    },
+    {
+        "rebelot/kanagawa.nvim",
+        name = 'kanagawa',
+        priority = 1000
+    },
+    { 
+        'rose-pine/neovim', 
+        name = 'rose-pine',
+        priority = 1000
+    },
+    { 
+        'whatyouhide/vim-gotham', 
+        name = 'gotham',
+        priority = 1000
+    },
+    { 
+        'AlexvZyl/nordic.nvim', 
+        name = 'nordic',
+        priority = 1000
+    },
+    { 
+        'shaunsingh/nord.nvim', 
+        name = 'nord',
+        priority = 1000
+    },
+    { 
+        'fenetikm/falcon', 
+        name = 'falcon',
+        priority = 1000
+    },
+    { 
+        'challenger-deep-theme/vim', 
+        name = 'challenger-deep',
+        priority = 1000
+    },
+
+    -- Monochromatic Color Themes
+    { 
+        'aditya-azad/candle-grey', 
+        name = 'candle-grey',
+        priority = 1000
+    },
+    { 
+        'ntk148v/komau.vim', 
+        name = 'komau',
+        priority = 1000
+    },
+
 
     -- Hoping around with a fuzzy finder
     { 
@@ -49,12 +100,14 @@ local plugins = {
     {
         'nvim-telescope/telescope-fzf-native.nvim', build = 'make' 
     },
+
     -- Comment easily
     {
         'numToStr/Comment.nvim',
         lazy = false,
     },
 
+    -- Close parenthesis and brackets automatically
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
@@ -69,50 +122,32 @@ local plugins = {
 
     -- LSP, Mason and Snippets
     {
-	  "VonHeikemen/lsp-zero.nvim",
-	  branch = 'v1.x',
-	  dependencies = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+        "VonHeikemen/lsp-zero.nvim",
+        branch = 'v1.x',
+        dependencies = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
 
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-buffer'},
-		  {'hrsh7th/cmp-path'},
-		  {'saadparwaiz1/cmp_luasnip'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'hrsh7th/cmp-nvim-lua'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lua'},
 
-		  -- Snippets
-		  {'L3MON4D3/LuaSnip'},
-		  {'rafamadriz/friendly-snippets'},
-	  }
-  }, 
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
+    }, 
 
--- {
---     "neovim/nvim-lspconfig",
---         lazy = false,
--- },
--- {
---     "williamboman/mason.nvim",
---         lazy = false,
--- },
--- {
---     'folke/neodev.nvim', 
---         lazy = false,
--- },
---     {
---         'hrsh7th/nvim-cmp',
---         lazy = false,
---         dependencies = {
---             'L3MON4D3/LuaSnip',
---             'saadparwaiz1/cmp_luasnip',
---             'rafamadriz/friendly-snippets',
---             'hrsh7th/cmp-nvim-lsp',
---         },
---     },
+    -- Amazing git plugin
+    {
+        'tpope/vim-fugitive',
+    },
 
     -- Directory tree to avoid disgusting netrw
     {
@@ -137,45 +172,41 @@ local plugins = {
         end
     },
 
-
     -- Set lualine as statusline
-  {
-    'nvim-lualine/lualine.nvim',
-    opts = {
-      options = {
-        icons_enabled = true,
-        theme = 'catppuccin',
-        component_separators = '|',
-        section_separators = '',
-      },
+    {
+        'nvim-lualine/lualine.nvim',
+        opts = {
+            options = {
+                icons_enabled = true,
+                theme = 'tokyonight',
+                component_separators = '|',
+                section_separators = '',
+            },
+        },
     },
-  },
 
-{
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
+    {
+        'lewis6991/gitsigns.nvim',
+        opts = {
+            signs = {
+                add = { text = '+' },
+                change = { text = '~' },
+                delete = { text = '_' },
+                topdelete = { text = '‾' },
+                changedelete = { text = '~' },
+            },
+        },
     },
-  },
-'tpope/vim-fugitive',
 
     -- Add indentation guides even on blank lines
-{
-    'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        opts = {
+            char = '┊',
+            show_trailing_blankline_indent = false,
+        },
     },
-  },
-
-
 
 }
 

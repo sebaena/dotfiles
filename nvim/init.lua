@@ -3,4 +3,5 @@ require "remap"
 require "plugins"
 
 -- set colorcheme easily
-SetDarkTheme("embark")
+vim.cmd.colorscheme('tokyonight-moon')
+-- SetDarkTheme("tokyonight-moon","ei")
