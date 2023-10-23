@@ -24,7 +24,15 @@ Update first
 sudo apt update
 sudo apt upgrade
 ```
-
+Install fonts (linux)
+```
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.zip
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+unzip "*.zip"
+rm -r *.zip
+fc-cache
+```
 Install c++/c essentials & CMake
 ```
 sudo apt install build-essential
