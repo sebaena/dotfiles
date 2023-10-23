@@ -70,7 +70,12 @@ Install tpm (tmux plugin manager)
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
+Install starship prompt
+```
+curl -sS https://starship.rs/install.sh | sh
 
+```
+then add ` eval "$(starship init bash)"` at the bootom of the ` ~/.bashrc` file
 
 Set-Up
 ------------
@@ -84,6 +89,7 @@ then create the symbolic links (change paths if you clone this directory to anot
 ```
 ln -s ~/github/dotfiles/nvim/ ~/.config/nvim
 ln -s ~/github/dotfiles/tmux/ ~/.config/tmux
+ln -s ~/github/dotfiles/starship/starship.toml ~/.config/starship.toml
 ```
 
 
