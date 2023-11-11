@@ -2,6 +2,8 @@ dotfiles
 =====
 This repository contains my personal configuration files for different development tools. Each directory has a README.md file with comments or directions for the corresponding tool. 
 
+I have compiled a list of commands to install tools and packages that I use and need when fresh installing a VM and whotnot. I rely heavily on Docker to create my development environments, so things like python libraries, npm, etc wont be listed here since I have dedicated Docker images for those.
+
 
 Fonts
 ------------
@@ -14,17 +16,9 @@ I usually rotate between:
 - Hack
 - JetBrains Mono
 
-System Installation
-------------
-This is a basic list of packages that are needed when starting from a fresh installation of a Debian based distro(in wsl2 or natively). I gathered them here for easy reference.
+The method of installing the fonts depends on the OS. In Windows, we need to download the fonts manually, decompress them and drag them into the Fonts manager (unless you want to create a ps1 or bat script). 
 
-
-Update first
-```
-sudo apt update
-sudo apt upgrade
-```
-Install fonts (linux)
+For linux, the installation can be achieved easily by running the following commands:
 ```
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.zip
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
@@ -33,26 +27,42 @@ unzip "*.zip"
 rm -r *.zip
 fc-cache
 ```
-Install c++/c essentials & CMake
+
+
+
+System Installation
+------------
+This is a basic list of packages that are needed when starting from a fresh installation of a Debian based distro(in wsl2 or natively). I gathered them here for easy reference.
+
+
+**Update first**
+```
+sudo apt update
+sudo apt upgrade
+```
+
+
+**Install c++/c essentials & CMake**
 ```
 sudo apt install build-essential
 sudo apt install cmake
 ```
 
-Install bat to have cat but with nice syntax higlighting
+
+**Install bat to have cat but with nice syntax higlighting**
 ```
 sudo apt install bat
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
 ```
 
-Can't live without ripgrep nor fzf :)
+**Install ripgrep & fzf**
 ```
 sudo apt-get install ripgrep
 sudo apt install fzf
 ```
 
-Install Nvim
+**Install Nvim**
 ```
 cd ~/.local/bin/
 sudo apt-get install fuse libfuse2
@@ -61,21 +71,49 @@ chmod u+x nvim.appimage
 mv nvim.appimage nvim
 ```
 
-Next, install Docker. Since this might change, is easier to copy paste the commands from the official documentation. Install docker server and not docker desktop
-Follow the official instructions: 
-- https://docs.docker.com/engine/install/ubuntu/#installation-methods
+**Install Docker**
+
+Since this might change more often than not, it might be easier to copy paste the commands from the official documentation. Make sure to install docker server and not docker desktop.
+Follow the official instructions: https://docs.docker.com/engine/install/ubuntu/#installation-methods
 
 
-Install tpm (tmux plugin manager)
+**Install tpm (tmux plugin manager)**
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-Install starship prompt
-```
-curl -sS https://starship.rs/install.sh | sh
+
+
+**Install Starship prompt**
+
+For the latest installation guide, check the official website: https://starship.rs/guide/#%F0%9F%9A%80-installation
+Otherwise, we can follow the basic installation steps. First, curl the installation script:
 
 ```
-then add ` eval "$(starship init bash)"` at the bootom of the ` ~/.bashrc` file
+curl -sS https://starship.rs/install.sh | sh
+```
+
+then appent the command  `eval "$(starship init bash)"` at the end of the `~/.bashrc` file. A simple one liner is:
+
+```
+echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
+```
+
+
+**Install Starship prompt**
+
+For the latest installation guide, check the official website: https://starship.rs/guide/#%F0%9F%9A%80-installation
+Otherwise, we can follow the basic installation steps. First, curl the installation script:
+
+```
+curl -sS https://starship.rs/install.sh | sh
+```
+
+then appent the command  `eval "$(starship init bash)"` at the end of the `~/.bashrc` file. A simple one liner is:
+
+```
+echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
+```
+
 
 Set-Up
 ------------
