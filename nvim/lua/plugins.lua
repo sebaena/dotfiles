@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- List the plugins to install
 local plugins = { 
-
     -- Color themes
     { 
         'ellisonleao/gruvbox.nvim', 
