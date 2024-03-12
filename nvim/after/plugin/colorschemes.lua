@@ -15,7 +15,7 @@ function SetThemeManually(color, background, transparency)
 end
 
 function SetDarkTheme(color, transparency) 
-	color = color or "embark" -- set some default
+	color = color or "rose-pine-moon" -- set some default
     SetThemeManually(color, "dark", transparency)
 end
 

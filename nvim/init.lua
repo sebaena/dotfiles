@@ -4,4 +4,4 @@ require "plugins"
 
 -- set colorcheme easily
 vim.cmd.colorscheme('rose-pine-moon')
--- SetDarkTheme("tokyonight-moon","ei")
+-- SetDarkTheme()
