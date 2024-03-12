@@ -17,3 +17,10 @@ vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.scrolloff = 8
 vim.opt.clipboard = 'unnamedplus'
+
+-- remove trailing white spaces on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
+
