@@ -17,6 +17,7 @@ vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.scrolloff = 8
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.colorcolumn = '120'
 
 -- remove trailing white spaces on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {

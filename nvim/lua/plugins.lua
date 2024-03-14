@@ -13,26 +13,26 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- List the plugins to install
-local plugins = { 
+local plugins = {
     -- Color themes
-    { 
-        'ellisonleao/gruvbox.nvim', 
-        name='gruvbox', 
+    {
+        'ellisonleao/gruvbox.nvim',
+        name='gruvbox',
         priority = 1000
-    },
-    { 
-        'blazkowolf/gruber-darker.nvim',
-        name='gruber', 
-        priority = 1000
-    },
-    { 
-        'catppuccin/nvim',
-        name = 'catppuccin',
-        priority = 1000 
     },
     {
-        'embark-theme/vim', 
-        name = 'embark', 
+        'blazkowolf/gruber-darker.nvim',
+        name='gruber',
+        priority = 1000
+    },
+    {
+        'catppuccin/nvim',
+        name = 'catppuccin',
+        priority = 1000
+    },
+    {
+        'embark-theme/vim',
+        name = 'embark',
         priority = 1000
     },
     {
@@ -45,59 +45,59 @@ local plugins = {
         name = 'kanagawa',
         priority = 1000
     },
-    { 
-        'rose-pine/neovim', 
+    {
+        'rose-pine/neovim',
         name = 'rose-pine',
         priority = 1000
     },
-    { 
-        'whatyouhide/vim-gotham', 
+    {
+        'whatyouhide/vim-gotham',
         name = 'gotham',
         priority = 1000
     },
-    { 
-        'AlexvZyl/nordic.nvim', 
+    {
+        'AlexvZyl/nordic.nvim',
         name = 'nordic',
         priority = 1000
     },
-    { 
-        'shaunsingh/nord.nvim', 
+    {
+        'shaunsingh/nord.nvim',
         name = 'nord',
         priority = 1000
     },
-    { 
-        'fenetikm/falcon', 
+    {
+        'fenetikm/falcon',
         name = 'falcon',
         priority = 1000
     },
-    { 
-        'challenger-deep-theme/vim', 
+    {
+        'challenger-deep-theme/vim',
         name = 'challenger-deep',
         priority = 1000
     },
 
     -- Monochromatic Color Themes
-    { 
-        'aditya-azad/candle-grey', 
+    {
+        'aditya-azad/candle-grey',
         name = 'candle-grey',
         priority = 1000
     },
-    { 
-        'ntk148v/komau.vim', 
+    {
+        'ntk148v/komau.vim',
         name = 'komau',
         priority = 1000
     },
 
 
     -- Hoping around with a fuzzy finder
-    { 
+    {
         'nvim-telescope/telescope.nvim',
-        dependencies = { 
-            'nvim-lua/plenary.nvim' 
-        } 
+        dependencies = {
+            'nvim-lua/plenary.nvim'
+        }
     },
     {
-        'nvim-telescope/telescope-fzf-native.nvim', build = 'make' 
+        'nvim-telescope/telescope-fzf-native.nvim', build = 'make'
     },
 
     -- Comment easily
@@ -141,7 +141,7 @@ local plugins = {
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
         }
-    }, 
+    },
 
     -- Amazing git plugin
     {
@@ -164,7 +164,7 @@ local plugins = {
     -- Easy surrounding motions to add or remove parenthesis, etc
     {
         "kylechui/nvim-surround",
-        version = "*", 
+        version = "*",
         event = "VeryLazy",
         config = function()
             require("nvim-surround").setup({ })
@@ -176,7 +176,7 @@ local plugins = {
         opts = {
             options = {
                 icons_enabled = true,
-                theme = 'horizon',
+                theme = 'ayu_dark',
                 component_separators = '|',
                 section_separators = { left = '', right = '' },
             },
@@ -224,7 +224,8 @@ local plugins = {
         'lukas-reineke/indent-blankline.nvim',
         main = "ibl",
         opts = {
-            indent = { char = '┊'}
+           indent = {char = '▏', highlight = { "NonText" } },
+        scope = {show_start = false, show_end = false}
         },
     },
 
