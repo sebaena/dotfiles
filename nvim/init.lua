@@ -7,4 +7,4 @@ require "plugins"
 -- vim.cmd.colorscheme('kanagawa')
 -- vim.cmd.colorscheme('tokyonight')
 vim.cmd.colorscheme('falcon')
--- SetDarkTheme()
+-- SetDarkTheme('tokyonight')
