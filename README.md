@@ -1,6 +1,6 @@
 dotfiles
 =====
-This repository contains my personal configuration files for different development tools. Each directory has a README.md file with comments or directions for the corresponding tool. 
+This repository contains my personal configuration files for different development tools. Each directory has a README.md file with comments or directions for the corresponding tool.
 
 I have compiled a list of commands to install tools and packages that I use and need when fresh installing a VM and whotnot. I rely heavily on Docker to create my development environments, so things like python libraries, npm, etc wont be listed here since I have dedicated Docker images for those.
 
@@ -16,7 +16,7 @@ I usually rotate between:
 - Hack
 - JetBrains Mono
 
-The method of installing the fonts depends on the OS. In Windows, we need to download the fonts manually, decompress them and drag them into the Fonts manager (unless you want to create a ps1 or bat script). 
+The method of installing the fonts depends on the OS. In Windows, we need to download the fonts manually, decompress them and drag them into the Fonts manager (unless you want to create a ps1 or bat script).
 
 For linux, the installation can be achieved easily by running the following commands:
 ```
@@ -59,7 +59,13 @@ ln -s /usr/bin/batcat ~/.local/bin/bat
 **Install ripgrep & fzf**
 ```
 sudo apt-get install ripgrep
-sudo apt install fzf
+```
+
+Ubuntu's package manager has a very old version of fzf, which lacks some important features.
+So install from source
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+cd ~/.fzf && git pull && ./install
 ```
 
 **Install Nvim**
@@ -117,7 +123,7 @@ echo "eval \"\$(starship init bash)\"" >> ~/.bashrc
 
 Set-Up
 ------------
-I usually clone this (dotfiles) repository to ` ~/github/` and create symbolic links, that way my configuration is always tracked by git. 
+I usually clone this (dotfiles) repository to ` ~/github/` and create symbolic links, that way my configuration is always tracked by git.
 
 so make sure that a configuration directory exists
 ```

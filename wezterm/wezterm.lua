@@ -24,6 +24,9 @@ config.initial_cols = 110
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.integrated_title_button_style = "Windows"
 
+-- shut annoying sound off
+config.audible_bell = "Disabled"
+
 -- Format tabs
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
@@ -36,7 +39,7 @@ wezterm.on(
     local foreground = '#808080'
 
     if tab.is_active then
-      background = '#5ae8c2' 
+      background = '#5ae8c2'
       foreground = 'black'
     elseif hover then
       background = '#3b3052'
