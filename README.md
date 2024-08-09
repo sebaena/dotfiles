@@ -1,8 +1,11 @@
 
 
-<!-- <center><img src="img/dotfiles_logo.svg" alt="dotfiles logo" width=600 ></center> -->
-<!-- <center><img src="img/dotfiles_logo.svg" alt="dotfiles logo" width=400 ></center> -->
-<center><img src="img/alone_green.svg" alt="dotfiles logo" width=400 ></center>
+
+
+<p align="center"><img src="img/dotfiles_logo_green.svg" alt="Sublime's custom image" width=400 /></p>
+
+
+<!-- ![logo](img/dotfiles_logo_green.svg)  -->
 
 ![Fedora](https://img.shields.io/badge/Fedora-black?style=for-the-badge&logo=fedora)
 
