@@ -1,6 +1,10 @@
 
 
-<center><img src="img/dotfiles_logo.svg" alt="dotfiles logo" width=600 ></center>
+<!-- <center><img src="img/dotfiles_logo.svg" alt="dotfiles logo" width=600 ></center> -->
+<center><img src="img/alone.svg" alt="dotfiles logo" width=400 ></center>
+
+![Fedora](https://img.shields.io/badge/Fedora-black?style=for-the-badge&logo=fedora)
+
 
 This repository contains my personal configuration files for different tools. Each directory has a README.md file with comments or instructions for the corresponding tool. I currently do all my development work in Linux or WSL. 
 
