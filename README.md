@@ -6,13 +6,13 @@
 
 <div align="center">
 
-  <a style= "text-decoration: none;" href="">![Fedora](https://img.shields.io/badge/Fedora-grey?style=for-the-badge&logo=fedora) </a>
-  <a style= "text-decoration: none;" href="">![Nvim](https://img.shields.io/badge/Neovim-%23262926?style=for-the-badge&logo=neovim) </a>
+  <a style= "text-decoration: none;" href="">![Fedora](https://img.shields.io/badge/Fedora-grey?style=for-the-badge&logo=fedora)</a>
+  <a style= "text-decoration: none;" href="">![Nvim](https://img.shields.io/badge/Neovim-%23262926?style=for-the-badge&logo=neovim)</a>
   <a style= "text-decoration: none;" href="">![Docker](https://img.shields.io/badge/Docker-%23dfdfeb?style=for-the-badge&logo=docker)</a>
-  <a style= "text-decoration: none;" href="">![Tmux](https://img.shields.io/badge/Tmux-%23485249?style=for-the-badge&logo=tmux) </a>
-  <a style= "text-decoration: none;" href="">![Starship](https://img.shields.io/badge/StarShip-%23443647?style=for-the-badge&logo=starship&logoColor=%23c540e3) </a>
-  <a style= "text-decoration: none;" href="">![NerdFonts](https://img.shields.io/badge/NerdFonts-%23363232?style=for-the-badge&logo=nerdfont) </a>
-  <a style= "text-decoration: none;" href="">![Ubuntu](https://img.shields.io/badge/Ubuntu-%2377216F?style=for-the-badge&logo=ubuntu) </a>
+  <a style= "text-decoration: none;" href="">![Tmux](https://img.shields.io/badge/Tmux-%23485249?style=for-the-badge&logo=tmux)</a>
+  <a style= "text-decoration: none;" href="">![Starship](https://img.shields.io/badge/StarShip-%23443647?style=for-the-badge&logo=starship&logoColor=%23c540e3)</a>
+  <a style= "text-decoration: none;" href="">![NerdFonts](https://img.shields.io/badge/NerdFonts-%23363232?style=for-the-badge&logo=nerdfont)</a>
+  <a style= "text-decoration: none;" href="">![Ubuntu](https://img.shields.io/badge/Ubuntu-%2377216F?style=for-the-badge&logo=ubuntu)</a>
   
 </div>
 
