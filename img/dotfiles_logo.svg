@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="204.61128mm"
+   height="92.144958mm"
+   viewBox="0 0 204.61128 92.144958"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="dotfiledarkblue.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:export-bgcolor="#ffffff00" />
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Blur"
+       id="filter28-8"
+       x="-0.17694935"
+       y="-0.29499114"
+       width="1.3538987"
+       height="1.5899823">
+      <feGaussianBlur
+         stdDeviation="6.75779 7.06451"
+         result="blur"
+         id="feGaussianBlur28-4" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.7911884,-81.964216)">
+    <ellipse
+       style="fill:#3b4252;fill-opacity:1;stroke-width:0.239;stroke-dasharray:none;filter:url(#filter28-8)"
+       id="path2-1"
+       cx="100.01281"
+       cy="163.43861"
+       rx="45.82864"
+       ry="28.737852"
+       inkscape:export-filename="dotfilegray.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       transform="matrix(1.6488323,0,0,1.008312,-53.80751,-36.760424)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:'Iosevka Nerd Font Mono';-inkscape-font-specification:'Iosevka Nerd Font Mono Medium';fill:#ccf0fc;fill-opacity:1;stroke-width:0.264583"
+       x="70.585304"
+       y="131.07503"
+       id="text1-6"><tspan
+         sodipodi:role="line"
+         id="tspan1-6"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:'Iosevka Nerd Font Mono';-inkscape-font-specification:'Iosevka Nerd Font Mono Medium';fill:#ccf0fc;fill-opacity:1;stroke-width:0.264583"
+         x="70.585304"
+         y="131.07503">~/.dotfiles</tspan></text>
+  </g>
+</svg>
