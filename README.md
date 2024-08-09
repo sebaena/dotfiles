@@ -21,7 +21,9 @@ This repository contains my personal configuration files for different tools. Ea
 
 
 # How To Use
-In Linux based systems, I usually clone this (dotfiles) repository to ` ~/github/` and create symbolic links, that way my configuration is always tracked by git.
+
+### Linux
+I usually clone this (dotfiles) repository to ` ~/github/` and create symbolic links, that way my configuration is always tracked by git.
 
 so make sure that a configuration directory exists
 ```
@@ -33,12 +35,13 @@ ln -s ~/github/dotfiles/nvim/ ~/.config/nvim
 ln -s ~/github/dotfiles/tmux/ ~/.config/tmux
 ln -s ~/github/dotfiles/starship/starship.toml ~/.config/starship.toml
 ```
+### Windows
+
+The only tool that I use in windows is the Wezterm terminal. Just copy the "wezterm" directory into "C:\Users\\< username >\\ .config\"
 
 
-> **_NOTE:_**  If I need to use Wezterm in windows, I usually copy the "wezterm" directory into "C:\Users\\< username >\\ .config\". This might work for other tools as well, so double check the tools own documentation. 
 
-
-# System Set-up for Linux Environments
+# Linux Set-Up
 This is a quick reference on the minimum packages that I use in all my Linux (and WSL) instances. I gathered them here for easy reference.
 
 
@@ -69,7 +72,73 @@ Since this might change more often than not, it might be easier to copy paste th
 Follow the official instructions: https://docs.docker.com/engine/install/ubuntu/#installation-methods
 
 
-## Debian and Ubuntu Packages
+## Fedora Packages
+
+**update packages**
+```
+sudo dnf update
+```
+
+**enable flathub remote**
+```
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+**enable rpm fusion (free)**
+```
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
+
+**enable rpm fusion nonfree**
+```
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+**update**
+```
+sudo dnf -y groupupdate core
+```
+
+**install media codecs**
+```
+sudo dnf -y swap 'ffmpeg-free' 'ffmpeg' --allowerasing
+```
+
+**fastfetch**
+```
+sudo dnf install fastfetch
+```
+
+**vscode**
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc 
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf check-update
+sudo dnf install code
+```
+
+**cmake**
+```
+sudo dnf install cmake
+```
+
+**ripgrep and fzf**
+```
+sudo dnf install ripgrep fzf
+```
+In order to activate fzf keybindings, paste this into ~/.bashrc
+```
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+```
+
+**bat**
+```
+sudo dnf install bat
+```
+
+
+## Ubuntu Packages
 
 
 **Update first**
