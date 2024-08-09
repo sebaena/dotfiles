@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="68.808586mm"
-   height="12.268195mm"
-   viewBox="0 0 68.808586 12.268195"
+   width="68.212769mm"
+   height="12.268228mm"
+   viewBox="0 0 68.212769 12.268228"
    version="1.1"
    id="svg1"
    inkscape:export-filename="dotfiledarkblue.svg"
@@ -42,20 +42,28 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-83.499147,-137.58711)">
+     transform="translate(-77.735269,-202.35116)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:'Iosevka Nerd Font Mono';-inkscape-font-specification:'Iosevka Nerd Font Mono Medium';fill:#3b4252;fill-opacity:1;stroke-width:0.264583"
-       x="83.245148"
-       y="148.03922"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.6449px;font-family:'Iosevka Nerd Font Mono';-inkscape-font-specification:'Iosevka Nerd Font Mono Medium';fill:#00db8b;fill-opacity:0.991713;stroke-width:0.263435"
+       x="77.821175"
+       y="211.87981"
        id="text1-6"
        inkscape:export-filename="alone.svg"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
+       inkscape:export-ydpi="96"
+       transform="scale(0.99566042,1.0043585)"><tspan
          sodipodi:role="line"
          id="tspan1-6"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.7px;font-family:'Iosevka Nerd Font Mono';-inkscape-font-specification:'Iosevka Nerd Font Mono Medium';fill:#3b4252;fill-opacity:1;stroke-width:0.264583"
-         x="83.245148"
-         y="148.03922">~/.dotfiles</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:12.6449px;font-family:'Iosevka Nerd Font Mono';-inkscape-font-specification:'Iosevka Nerd Font Mono Medium';fill:#00db8b;fill-opacity:0.991713;stroke-width:0.263435"
+         x="77.821175"
+         y="211.87981">~/.dotfiles</tspan></text>
+    <rect
+       style="fill:#000081;fill-opacity:0;stroke-width:0.239;stroke-dasharray:none"
+       id="rect31"
+       width="59.440372"
+       height="18.977949"
+       x="40.999531"
+       y="184.40839" />
   </g>
 </svg>

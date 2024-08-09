@@ -1,7 +1,8 @@
 
 
 <!-- <center><img src="img/dotfiles_logo.svg" alt="dotfiles logo" width=600 ></center> -->
-<center><img src="img/alone.svg" alt="dotfiles logo" width=400 ></center>
+<!-- <center><img src="img/dotfiles_logo.svg" alt="dotfiles logo" width=400 ></center> -->
+<center><img src="img/alone_green.svg" alt="dotfiles logo" width=400 ></center>
 
 ![Fedora](https://img.shields.io/badge/Fedora-black?style=for-the-badge&logo=fedora)
 
