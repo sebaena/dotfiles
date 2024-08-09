@@ -4,11 +4,16 @@
 
 <p align="center"><img src="img/dotfiles_logo_green.svg" alt="Sublime's custom image" width=400 /></p>
 
+<div align="center">
 
-<!-- ![logo](img/dotfiles_logo_green.svg)  -->
-
-![Fedora](https://img.shields.io/badge/Fedora-black?style=for-the-badge&logo=fedora)
-
+  <a href="">![Fedora](https://img.shields.io/badge/Fedora-grey?style=for-the-badge&logo=fedora) </a>
+  <a href="">![Nvim](https://img.shields.io/badge/Neovim-%23262926?style=for-the-badge&logo=neovim) </a>
+  <a href="">![Docker](https://img.shields.io/badge/Docker-%23dfdfeb?style=for-the-badge&logo=docker)</a>
+  <a href="">![Tmux](https://img.shields.io/badge/Tmux-%23485249?style=for-the-badge&logo=tmux) </a>
+  <a href="">![Starship](https://img.shields.io/badge/StarShip-%23443647?style=for-the-badge&logo=starship&logoColor=%23c540e3) </a>
+  <a href="">![NerdFonts](https://img.shields.io/badge/NerdFonts-%23363232?style=for-the-badge&logo=nerdfont) </a>
+  <a href="">![Ubuntu](https://img.shields.io/badge/Ubuntu-%2377216F?style=for-the-badge&logo=ubuntu) </a>
+</div>
 
 This repository contains my personal configuration files for different tools. Each directory has a README.md file with comments or instructions for the corresponding tool. I currently do all my development work in Linux or WSL. 
 
