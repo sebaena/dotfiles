@@ -98,6 +98,10 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 ```
 sudo dnf -y groupupdate core
 ```
+**install Neovim**
+```
+sudo dnf -y neovim
+```
 
 **install media codecs**
 ```
