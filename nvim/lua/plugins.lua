@@ -87,7 +87,11 @@ local plugins = {
         name = 'komau',
         priority = 1000
     },
-
+    {
+       'EdenEast/nightfox.nvim',
+        name = 'nightfox',
+        priority = 1000
+    },
 
     -- Hoping around with a fuzzy finder
     {
