@@ -4,14 +4,24 @@ local wezterm = require 'wezterm'
 -- hold the configuration.
 local config = wezterm.config_builder()
 
--- set ubuntu as default when opening. Comment this if using linux
-config.default_domain = 'WSL:Ubuntu-22.04'
+-- Set configurations needed in Windows. Change the default_domain to the right version of WSL if needed
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    -- set ubuntu as default when opening.
+    config.default_domain = 'WSL:Ubuntu-22.04'
 
--- set powershell as default shell in windows
-config.default_prog = { 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe' }
+    -- set powershell as default shell in windows. So that it gives the option to open a new tab in it when right click
+    config.default_prog = { 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe' }
 
--- set color scheme
--- my usuals are (come by default)= 'nightfox', 'TweakedPandora' , 'Night Owl (Gogh)', 'Kanagawa (Gogh)', 'kanagawabones'
+    -- get rid of title bar in the window
+    config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+    config.integrated_title_button_style = "Windows"
+
+elseif wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
+    config.enable_wayland = false
+end
+
+-- set color scheme my usuals that come by default are:
+-- 'nightfox', 'TweakedPandora' , 'Night Owl (Gogh)', 'Kanagawa (Gogh)', 'kanagawabones'
 theme = 'nightfox'
 
 config.color_scheme = theme
@@ -42,9 +52,6 @@ config.font_size = 14
 config.initial_rows = 30
 config.initial_cols = 110
 
--- get rid of title bar in the window
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.integrated_title_button_style = "Windows"
 
 -- shut annoying sound off
 config.audible_bell = "Disabled"
