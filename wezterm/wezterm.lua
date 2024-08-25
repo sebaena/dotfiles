@@ -18,6 +18,17 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
 elseif wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
     config.enable_wayland = false
+    config.window_decorations = "RESIZE"
+    config.use_fancy_tab_bar = false
+
+    config.hide_tab_bar_if_only_one_tab = true
+
+    config.window_padding = {
+        left = 10,
+        right = 10,
+        -- top = -10,
+        -- bottom = -10
+    }
 end
 
 -- set color scheme my usuals that come by default are:
@@ -57,7 +68,7 @@ config.initial_cols = 110
 config.audible_bell = "Disabled"
 
 -- Format tabs
-config.tab_bar_at_bottom = false
+-- config.tab_bar_at_bottom = false
 -- config.use_fancy_tab_bar = false
 
 wezterm.on(

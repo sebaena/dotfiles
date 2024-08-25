@@ -8,8 +8,7 @@ format = """$directory$git_branch$git_status$python$nodejs$conda$character"""
 [character]
 # success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 # success_symbol = '[:]( green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-# success_symbol = '' 
-success_symbol = '' 
+success_symbol = ''
 
 [hostname]
 ssh_only = true
@@ -23,4 +22,4 @@ read_only = ''
 
 [python]
 python_binary = ['venv']
-symbol = '🐍 ' 
+symbol = '🐍 '
