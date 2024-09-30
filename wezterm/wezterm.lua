@@ -16,6 +16,21 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
     config.integrated_title_button_style = "Windows"
 
+	config.launch_menu = {
+		{
+			label = "PowerShell",
+			domain = { DomainName = "local" },
+			args = { 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe' },
+		},
+		{
+      label = "GitBash",
+      domain = { DomainName = "local" },
+			args = {"C:\\Program Files\\Git\\bin\\bash.exe", "-i", "-l"},
+		},
+	}
+
+
+
 elseif wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
     config.enable_wayland = false
     config.window_decorations = "RESIZE"
