@@ -3,7 +3,7 @@
 add_newline = true
 
 
-format = """$directory$git_branch$git_status$python$nodejs$conda$character"""
+format = """$conda$directory$git_branch$git_status$python$nodejs$character"""
 
 [character]
 # success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
@@ -23,3 +23,10 @@ read_only = ''
 [python]
 python_binary = ['venv']
 symbol = '🐍 '
+
+# ~/.config/starship.toml
+
+[conda]
+disabled = false
+ignore_base = false
+format = '\([$environment](dimmed green)\) '
