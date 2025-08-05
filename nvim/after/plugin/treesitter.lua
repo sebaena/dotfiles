@@ -1,18 +1,18 @@
 require('nvim-treesitter.configs').setup {
-	ensure_installed = { 
+	ensure_installed = {
 		'vim',
-		'javascript', 
+		'javascript',
 		'typescript',
 		'css',
 		'html',
 		'json',
-		'lua', 
+		'lua',
 		'cpp',
 		'c',
 		'python',
 		'matlab',
 		'bash',
-		'verilog',
+		'go',
 		'groovy',
 		'dockerfile',
 		'vimdoc',
@@ -21,7 +21,7 @@ require('nvim-treesitter.configs').setup {
     auto_install = false,
 		sync_install = false,
 
-		highlight = { 
+		highlight = {
 			enable = true ,
 			additional_vim_regex_highlighting = false,
 		},
