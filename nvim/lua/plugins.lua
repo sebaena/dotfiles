@@ -98,7 +98,10 @@ local plugins = {
         'nvim-telescope/telescope.nvim',
         dependencies = {
             'nvim-lua/plenary.nvim'
-        }
+        },
+        config = function()
+            require('plugins.telescope')
+        end,
     },
     {
         'nvim-telescope/telescope-fzf-native.nvim', build = 'make'
@@ -108,19 +111,29 @@ local plugins = {
     {
         'numToStr/Comment.nvim',
         lazy = false,
+        opts = {
+            toggler = {
+                line = "<leader>'"
+            },
+            opleader = {
+                line = "<leader>'"
+            },
+        }
     },
 
     -- Close parenthesis and brackets automatically
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
-        opts = {} -- this is equalent to setup({}) function
+        opts = {}
     },
 
     -- Better syntax highlighting
     {
         'nvim-treesitter/nvim-treesitter',
-        -- build = ':TSUpdate',
+        config = function()
+            require('plugins.treesitter')
+        end,
     },
 
     -- Mason
@@ -136,14 +149,14 @@ local plugins = {
             }
         }
     },
-    {
-        'williamboman/mason-lspconfig.nvim',
-        -- config = function()
-        --     require('mason-lspconfig').setup({
-        --         "lua_ls","gopls"
-        --     })
-        -- end
-    },
+    -- {
+    --     'williamboman/mason-lspconfig.nvim',
+    --     -- config = function()
+    --     --     require('mason-lspconfig').setup({
+    --     --         "lua_ls","gopls"
+    --     --     })
+    --     -- end
+    -- },
 
     -- Mini Library
     {
@@ -172,7 +185,7 @@ local plugins = {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require("nvim-tree").setup {}
+            require("plugins.tree")
         end,
     },
 
@@ -188,6 +201,9 @@ local plugins = {
     -- Set lualine as statusline
     {
         'nvim-lualine/lualine.nvim',
+        config = function()
+            require("plugins.lualine")
+        end,
     },
 
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
