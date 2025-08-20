@@ -149,14 +149,14 @@ local plugins = {
             }
         }
     },
-    -- {
-    --     'williamboman/mason-lspconfig.nvim',
-    --     -- config = function()
-    --     --     require('mason-lspconfig').setup({
-    --     --         "lua_ls","gopls"
-    --     --     })
-    --     -- end
-    -- },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        config = function()
+            require('mason-lspconfig').setup({
+                "lua_ls","gopls"
+            })
+        end
+    },
 
     -- Mini Library
     {
@@ -164,12 +164,12 @@ local plugins = {
     },
 
     -- Lspconfig
-    -- {
-    --     'neovim/nvim-lspconfig',
-    --     config = function()
-    --         require('lspconfig')
-    --     end
-    -- },
+    {
+       'neovim/nvim-lspconfig',
+        config = function()
+            require('lsp')
+        end
+    },
 
     -- Amazing git plugin
     {
