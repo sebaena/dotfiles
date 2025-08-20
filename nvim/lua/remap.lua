@@ -27,4 +27,3 @@ vim.keymap.set('n', '<S-Down>', ':resize -1<CR>',{silent=true})
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 
-vim.lsp.enable({'gopls'})

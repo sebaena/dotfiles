@@ -164,12 +164,12 @@ local plugins = {
     },
 
     -- Lspconfig
-    {
-        'neovim/nvim-lspconfig',
-        config = function()
-            require('lspconfig')
-        end
-    },
+    -- {
+    --     'neovim/nvim-lspconfig',
+    --     config = function()
+    --         require('lspconfig')
+    --     end
+    -- },
 
     -- Amazing git plugin
     {
