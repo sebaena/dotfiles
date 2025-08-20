@@ -120,31 +120,42 @@ local plugins = {
     -- Better syntax highlighting
     {
         'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate',
+        -- build = ':TSUpdate',
     },
 
-    -- LSP, Mason and Snippets
+    -- Mason
     {
-        "VonHeikemen/lsp-zero.nvim",
-        branch = 'v1.x',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+    "mason-org/mason.nvim",
+        opts = {
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                }
+            }
         }
+    },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        -- config = function()
+        --     require('mason-lspconfig').setup({
+        --         "lua_ls","gopls"
+        --     })
+        -- end
+    },
+
+    -- Mini Library
+    {
+        'echasnovski/mini.nvim', version = false
+    },
+
+    -- Lspconfig
+    {
+        'neovim/nvim-lspconfig',
+        config = function()
+            require('lspconfig')
+        end
     },
 
     -- Amazing git plugin

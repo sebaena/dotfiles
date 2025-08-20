@@ -1,9 +1,9 @@
 -- Set mapleader
 vim.g.mapleader = ' '
 
--- Save and exit 
-vim.keymap.set('n', '<leader>w',':w<CR>') 
-vim.keymap.set('n', '<leader>q',':q<CR>') 
+-- Save and exit
+vim.keymap.set('n', '<leader>w',':w<CR>')
+vim.keymap.set('n', '<leader>q',':q<CR>')
 
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>',{silent=true})
@@ -23,5 +23,8 @@ vim.keymap.set('n', '<S-Right>', ':vertical resize +1<CR>',{silent=true})
 vim.keymap.set('n', '<S-Up>', ':resize +1<CR>',{silent=true})
 vim.keymap.set('n', '<S-Down>', ':resize -1<CR>',{silent=true})
 
--- Better copy pasting 
+-- Better copy pasting
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+
+vim.lsp.enable({'gopls'})

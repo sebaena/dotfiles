@@ -18,6 +18,9 @@ vim.opt.hlsearch = true
 vim.opt.scrolloff = 8
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.colorcolumn = '120'
+-- vim.o.langmenu = "en_US.UTF-8"  -- Set the menu language to English
+-- vim.o.encoding = "utf-8"         -- Ensure proper encoding
+-- vim.cmd("language en_US.UTF-8")  -- Explicitly set language to English
 
 -- remove trailing white spaces on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
