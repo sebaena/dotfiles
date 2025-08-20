@@ -13,10 +13,10 @@
   <a style= "text-decoration: none;" href="">![Starship](https://img.shields.io/badge/StarShip-%23443647?style=for-the-badge&logo=starship&logoColor=%23c540e3)</a>
   <a style= "text-decoration: none;" href="">![NerdFonts](https://img.shields.io/badge/NerdFonts-%23363232?style=for-the-badge&logo=nerdfont)</a>
   <a style= "text-decoration: none;" href="">![Ubuntu](https://img.shields.io/badge/Ubuntu-%2377216F?style=for-the-badge&logo=ubuntu)</a>
-  
+
 </div>
 
-This repository contains my personal configuration files for different tools. Each directory has a README.md file with comments or instructions for the corresponding tool. I currently do all my development work in Linux or WSL. 
+This repository contains my personal configuration files for different tools. Each directory has a README.md file with comments or instructions for the corresponding tool. I currently do all my development work in Linux or WSL.
 
 
 
@@ -31,8 +31,8 @@ mkdir ~/.config/
 ```
 then create the symbolic links to the appropriate tools (change paths if you clone this directory to another location)
 ```
-ln -s ~/github/dotfiles/nvim/ ~/.config/nvim
-ln -s ~/github/dotfiles/tmux/ ~/.config/tmux
+ln -s ~/github/dotfiles/nvim ~/.config/nvim
+ln -s ~/github/dotfiles/tmux ~/.config/tmux
 ln -s ~/github/dotfiles/starship/starship.toml ~/.config/starship.toml
 ```
 ### Windows
@@ -56,7 +56,7 @@ I usually rotate between:
 - JetBrains Mono
 
 
-Use the following commands to install in an easy way. 
+Use the following commands to install in an easy way.
 ```
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.zip
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
@@ -115,7 +115,7 @@ sudo dnf install fastfetch
 
 **vscode**
 ```
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc 
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 dnf check-update
 sudo dnf install code

@@ -1,5 +1,5 @@
 ---@type vim.lsp.Config
-return {
+ return {
     cmd = { 'lua-language-server' },
     filetypes = { 'lua' },
     root_markers = {

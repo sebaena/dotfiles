@@ -1,14 +1,9 @@
 
--- require("lsp")
 require "options"
 require "remap"
 require "plugins"
-
-vim.lsp.enable({
-  "lua_ls",
-    -- "pyright",
-})
-
+require "lsp"
+-- asdfa
 -- -- set colorcheme easily
 -- -- vim.cmd.colorscheme('rose-pine-moon')
 -- -- vim.cmd.colorscheme('kanagawa')
