@@ -136,40 +136,68 @@ local plugins = {
         end,
     },
 
-    -- Mason
+    -- Lspconfig
+    -- {
+    --    'neovim/nvim-lspconfig',
+    --     -- config = function()
+    --     --     require('lsp')
+    --     -- end
+    -- },
+
+    -- -- Mason
+    -- {
+    -- "mason-org/mason.nvim",
+    --     opts = {
+    --         ui = {
+    --             icons = {
+    --                 package_installed = "✓",
+    --                 package_pending = "➜",
+    --                 package_uninstalled = "✗"
+    --             }
+    --         }
+    --     }
+    -- },
+    -- {
+    --     'williamboman/mason-lspconfig.nvim',
+    --     -- config = function()
+    --     --     require('lsp')
+    --     -- end
+    --     -- config = function()
+    --     --     require('mason-lspconfig').setup({
+    --     --         opts = {
+    --     --             ensure_installed = {
+    --     --                 "lua_ls",
+    --     --                 "basedpyright"
+    --     --             },
+    --     --             automatic_enable = {
+    --     --                 "lua_ls",
+    --     --                 "basedpyright"
+    --     --             }
+    --     --         }
+    --     --     })
+    --     -- end
+    -- },
     {
-    "mason-org/mason.nvim",
-        opts = {
-            ui = {
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗"
-                }
-            }
-        }
-    },
-    {
-        'williamboman/mason-lspconfig.nvim',
-        config = function()
-            require('mason-lspconfig').setup({
-                "lua_ls","gopls"
-            })
-        end
-    },
+  'neovim/nvim-lspconfig',
+  dependencies = {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  },
+  config = function()
+    require('lsp')
+  end,
+},
+
 
     -- Mini Library
     {
-        'echasnovski/mini.nvim', version = false
-    },
-
-    -- Lspconfig
-    {
-       'neovim/nvim-lspconfig',
+        'echasnovski/mini.nvim',
+        version = false,
         config = function()
-            require('lsp')
+            require('plugins.mini')
         end
     },
+
 
     -- Amazing git plugin
     {
