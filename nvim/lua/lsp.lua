@@ -151,7 +151,7 @@ for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
   end
 end
 
--- -- -- Setup lua_ls with special settings first:
+-- -- -- Setup lua_ls with special settings first:.
 -- lspconfig.lua_ls.setup({
 --   on_attach = on_attach,
 --   settings = {
