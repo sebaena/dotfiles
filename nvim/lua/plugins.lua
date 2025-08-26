@@ -137,57 +137,24 @@ local plugins = {
     },
 
     -- Lspconfig
-    -- {
-    --    'neovim/nvim-lspconfig',
-    --     -- config = function()
-    --     --     require('lsp')
-    --     -- end
-    -- },
-
-    -- -- Mason
-    -- {
-    -- "mason-org/mason.nvim",
-    --     opts = {
-    --         ui = {
-    --             icons = {
-    --                 package_installed = "✓",
-    --                 package_pending = "➜",
-    --                 package_uninstalled = "✗"
-    --             }
-    --         }
-    --     }
-    -- },
-    -- {
-    --     'williamboman/mason-lspconfig.nvim',
-    --     -- config = function()
-    --     --     require('lsp')
-    --     -- end
-    --     -- config = function()
-    --     --     require('mason-lspconfig').setup({
-    --     --         opts = {
-    --     --             ensure_installed = {
-    --     --                 "lua_ls",
-    --     --                 "basedpyright"
-    --     --             },
-    --     --             automatic_enable = {
-    --     --                 "lua_ls",
-    --     --                 "basedpyright"
-    --     --             }
-    --     --         }
-    --     --     })
-    --     -- end
-    -- },
     {
-  'neovim/nvim-lspconfig',
-  dependencies = {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-  },
-  config = function()
-    require('lsp')
-  end,
-},
+       'neovim/nvim-lspconfig',
+    },
 
+    -- Mason
+     {
+     "mason-org/mason.nvim",
+         opts = {}
+     },
+
+    -- Mini Library
+    {
+        'echasnovski/mini.nvim',
+        version = false,
+        config = function()
+            require('plugins.mini')
+        end
+    },
 
     -- Mini Library
     {
@@ -257,6 +224,60 @@ local plugins = {
         scope = {show_start = false, show_end = false}
         },
     },
+    {
+        "L3MON4D3/LuaSnip",
+        keys = {}
+    },
+    {
+        "saghen/blink.cmp",
+        dependencies = {
+            "rafamadriz/friendly-snippets",
+        },
+        version = "*",
+        config = function()
+            require("blink.cmp").setup({
+                snippets = { preset = "luasnip" },
+                signature = { enabled = true },
+                appearance = {
+                    use_nvim_cmp_as_default = false,
+                    nerd_font_variant = "normal",
+                },
+                sources = {
+                    default = { "lsp", "path", "snippets", "buffer" },
+                    providers = {
+                        cmdline = {
+                            min_keyword_length = 2,
+                        },
+                    },
+                },
+                completion = {
+                    menu = {
+                        border = nil,
+                        scrolloff = 1,
+                        scrollbar = false,
+                        draw = {
+                            columns = {
+                                { "kind_icon" },
+                                { "label", "label_description", gap = 1 },
+                                { "kind" },
+                                { "source_name" },
+                            },
+                        },
+                    },
+                    documentation = {
+                        window = {
+                            border = 'single',
+                        },
+                        auto_show = true,
+                    },
+                },
+            })
+
+            require("luasnip.loaders.from_vscode").lazy_load()
+        end,
+    },
+
+
 
 }
 

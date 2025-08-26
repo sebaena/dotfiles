@@ -1,10 +1,10 @@
 
-require('mini.completion').setup({
-  -- completion = {
-  --   autocomplete = true,
-  --   debounce = 200,
-  -- },
-})
+-- require('mini.completion').setup({
+--   -- completion = {
+--   --   autocomplete = true,
+--   --   debounce = 200,
+--   -- },
+-- })
 
 
 -- Mini.surround setup
@@ -26,16 +26,20 @@ require('mini.completion').setup({
   -- },
 -- })
 
-require('mini.snippets').setup({
-  -- mappings = {
-  --   expand = '<C-k>',
-  --   jump_forward = '<C-l>',
-  --   jump_backward = '<C-h>',
-  -- },
-  -- Directory for custom snippets
-  -- snippets_dir = '~/.config/nvim/snippets',
-})
+-- local gen_loader = require('mini.snippets').gen_loader
+-- require('mini.snippets').setup({
+--   mappings = {
+--     expand = '<C-k>',
+--     jump_forward = '<C-l>',
+--     jump_backward = '<C-h>',
+--   },
+--     -- snippets = {
+--     --     gen_loader.from_lang(),
+--     -- }
+--   -- Directory for custom snippets
+--   -- snippets_dir = '~/.config/nvim/snippets',
+-- })
 
 
-require('mini.icons').setup()
-MiniIcons.tweak_lsp_kind()
+-- require('mini.icons').setup()
+-- MiniIcons.tweak_lsp_kind()

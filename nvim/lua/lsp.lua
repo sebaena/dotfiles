@@ -1,15 +1,38 @@
-local lspconfig = require("lspconfig")
-local mason = require("mason")
--- local mason_lspconfig = require("mason-lspconfig")
+-- Lsp configuration. This is all that is needed to have a working lsp
+-- Add new languages to the "servers" list to enable. Look up the names in Mason
+-- and lspconfig to know how to set the look-up table
 
-mason.setup()
+-- list all the lsp servers. Mason and lsp have different names
+-- for the same server, so this is liek a look-up table.
+-- Write new lsp servers here
+local servers = {
+  ["lua-language-server"] = {
+    name = "lua_ls",
+    settings = {
+            Lua = {
+                diagnostics = {
+                    globals = {
+                        "vim"
+                    }
+                }
+            }
+        },
+  },
+  ["python-lsp-server"] = {
+        name = "pylsp"
+    },
+  ["typescript-language-server"] = {
+        name = "ts_ls"
+    },
+  ["html-lsp"] = {
+        name = "html"
+    },
+  ["css-lsp"] = {
+        name = "cssls"
+    },
+}
 
--- mason_lspconfig.setup({
---   ensure_installed = { "lua_ls", "pylsp" },
---   automatic_installation = true,
--- })
-
--- Set keymaps for lsp navigation
+-- set keybindings for lsp navigation
 local on_attach = function(_, bufnr)
   local opts = { buffer = bufnr, noremap = true, silent = true }
   local map = vim.keymap.set
@@ -25,41 +48,26 @@ local on_attach = function(_, bufnr)
   map("n", "]d", vim.diagnostic.goto_next, opts)
 end
 
--- -- Configure lsp servers that use more than the default options
-vim.lsp.config('lua_ls', {
-  on_attach = on_attach,
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = {
-					'vim',
-					'require'
-				},
-			},
-		},
-	},
-})
 
-vim.lsp.config('pylsp', {
-  on_attach = on_attach,
-})
+-- create local variables for easy readibility
+local mason_registry = require("mason-registry")
+local lspconfig = require("lspconfig")
 
-vim.lsp.config('ts_ls', {
-  on_attach = on_attach,
-})
+-- Install servers in the servers list automatically if they are
+-- not installed. Then enable all servers and pass configuration
+-- to get lsp working automatically
+for mason_name, opts in pairs(servers) do
+    if not mason_registry.is_installed(mason_name) then
+        mason_registry.get_package(mason_name):install()
+    end
 
-vim.lsp.enable({'pylsp', 'lua_ls', 'ts_ls'})
+    local lsp_opts = vim.tbl_deep_extend("force", { on_attach = on_attach }, opts or {})
+    lspconfig[lsp_opts.name].setup(lsp_opts)
+    vim.lsp.enable(lsp_opts.name)
+end
 
--- Setup other installed servers automatically:
--- for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
---   if server ~= "lua_ls" then  -- already configured above
---     lspconfig[server].setup({
---       on_attach = on_attach,
---     })
---   end
--- end
 
--- Diagnostic config
+-- Diagnostic settings
 vim.diagnostic.config({
   virtual_lines = { current_line = true },
   underline = false,
