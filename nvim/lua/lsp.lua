@@ -1,10 +1,10 @@
 -- Lsp configuration. This is all that is needed to have a working lsp
--- Add new languages to the "servers" list to enable. Look up the names in Mason
--- and lspconfig to know how to set the look-up table
 
--- list all the lsp servers. Mason and lsp have different names
--- for the same server, so this is liek a look-up table.
--- Write new lsp servers here
+-- The steps to add a new language are:
+-- 1. find the name of the server in mason and lspconfig
+-- 2. add them in the servers list, ["mason name"] = {name = "lspconfig name"}
+-- 3. install the language in mason (or exit and open nvim after including it in the servers list)
+
 local servers = {
   ["lua-language-server"] = {
     name = "lua_ls",
@@ -32,6 +32,10 @@ local servers = {
     },
 }
 
+-- create local variables for easy readibility
+local mason_registry = require("mason-registry")
+local lspconfig = require("lspconfig")
+
 -- set keybindings for lsp navigation
 local on_attach = function(_, bufnr)
   local opts = { buffer = bufnr, noremap = true, silent = true }
@@ -49,9 +53,6 @@ local on_attach = function(_, bufnr)
 end
 
 
--- create local variables for easy readibility
-local mason_registry = require("mason-registry")
-local lspconfig = require("lspconfig")
 
 -- Install servers in the servers list automatically if they are
 -- not installed. Then enable all servers and pass configuration
@@ -63,7 +64,6 @@ for mason_name, opts in pairs(servers) do
 
     local lsp_opts = vim.tbl_deep_extend("force", { on_attach = on_attach }, opts or {})
     lspconfig[lsp_opts.name].setup(lsp_opts)
-    vim.lsp.enable(lsp_opts.name)
 end
 
 
