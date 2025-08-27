@@ -148,22 +148,22 @@ local plugins = {
      },
 
     -- Mini Library
-    {
-        'echasnovski/mini.nvim',
-        version = false,
-        config = function()
-            require('plugins.mini')
-        end
-    },
+    -- {
+    --     'echasnovski/mini.nvim',
+    --     version = false,
+    --     config = function()
+    --         require('plugins.mini')
+    --     end
+    -- },
 
-    -- Mini Library
-    {
-        'echasnovski/mini.nvim',
-        version = false,
-        config = function()
-            require('plugins.mini')
-        end
-    },
+    -- -- Mini Library
+    -- {
+    --     'echasnovski/mini.nvim',
+    --     version = false,
+    --     config = function()
+    --         require('plugins.mini')
+    --     end
+    -- },
 
 
     -- Amazing git plugin
@@ -272,14 +272,9 @@ local plugins = {
                     },
                 },
             })
-
             require("luasnip.loaders.from_vscode").lazy_load()
         end,
     },
-
-
-
 }
-
 
 require("lazy").setup(plugins)
