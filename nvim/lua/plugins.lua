@@ -147,25 +147,6 @@ local plugins = {
          opts = {}
      },
 
-    -- Mini Library
-    -- {
-    --     'echasnovski/mini.nvim',
-    --     version = false,
-    --     config = function()
-    --         require('plugins.mini')
-    --     end
-    -- },
-
-    -- -- Mini Library
-    -- {
-    --     'echasnovski/mini.nvim',
-    --     version = false,
-    --     config = function()
-    --         require('plugins.mini')
-    --     end
-    -- },
-
-
     -- Amazing git plugin
     {
         'tpope/vim-fugitive',

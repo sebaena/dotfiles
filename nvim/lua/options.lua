@@ -10,7 +10,6 @@ vim.o.mouse = 'a'
 vim.opt.nu = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.wrap = false
@@ -18,9 +17,9 @@ vim.opt.hlsearch = true
 vim.opt.scrolloff = 8
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.colorcolumn = '120'
--- vim.o.langmenu = "en_US.UTF-8"  -- Set the menu language to English
--- vim.o.encoding = "utf-8"         -- Ensure proper encoding
--- vim.cmd("language en_US.UTF-8")  -- Explicitly set language to English
+vim.opt.fileencoding = "utf-8"  -- the encoding written to a file
+vim.opt.ignorecase = true -- ignore case in search patterns
+vim.opt.expandtab = true -- convert tabs to spaces
 
 -- remove trailing white spaces on save
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
