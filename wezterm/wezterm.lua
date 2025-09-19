@@ -34,13 +34,10 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
         {
           label = "PowerShell",
            domain = { DomainName = "local" },
-          -- domain = { DomainName = "local" },
           args = { 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe' },
         },
         {
           label = "GitBash",
-          domain = { DomainName = "gitbash" },
-          -- domain = { DomainName = "local" },
           args = {"C:\\Program Files\\Git\\bin\\bash.exe", "-i", "-l"},
          },
 
